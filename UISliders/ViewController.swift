@@ -9,6 +9,9 @@
 import UIKit
 
 class ViewController: UIViewController {
+    @IBOutlet var label: UILabel!
+    @IBOutlet var fontSizeSlider: UISlider!
+    @IBOutlet var alphaSlider: UISlider!
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -18,6 +21,13 @@ class ViewController: UIViewController {
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
+    }
+    @IBAction func FontSize(_ sender: Any) {
+        label.font = UIFont(name: "Verdana", size: CGFloat(fontSizeSlider.value))
+    }
+   
+    @IBAction func AlphaSlider(_ sender: Any) {
+        //label.alpha =
     }
 
 
